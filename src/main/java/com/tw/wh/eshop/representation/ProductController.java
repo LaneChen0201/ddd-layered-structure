@@ -13,22 +13,21 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE;
 @RestController
 @RequestMapping(value = "/products")
 public class ProductController {
-    private ProductAppService productAppService;
+  private ProductAppService productAppService;
 
-    public ProductController(ProductAppService productAppService) {
-        this.productAppService = productAppService;
-    }
+  public ProductController(ProductAppService productAppService) {
+    this.productAppService = productAppService;
+  }
 
-    @PostMapping
-    @ResponseStatus(CREATED)
-    public String createProduct(@RequestBody @Valid CreateProductCommand command) {
-        return productAppService.createProduct(command);
-    }
+  @PostMapping
+  @ResponseStatus(CREATED)
+  public String createProduct(@RequestBody @Valid CreateProductCommand command) {
+    return productAppService.createProduct(command);
+  }
 
-    @GetMapping(value = "/{id}", produces = APPLICATION_JSON_UTF8_VALUE)
-    public ProductPTO byId(@PathVariable(name = "id") String id) {
-        // TODO: 获取单个Product详情
-        return productAppService.byId(id);
-    }
-
+  @GetMapping(value = "/{id}", produces = APPLICATION_JSON_UTF8_VALUE)
+  public ProductPTO byId(@PathVariable(name = "id") String id) {
+    // TODO: 获取单个Product详情
+    return productAppService.byId(id);
+  }
 }

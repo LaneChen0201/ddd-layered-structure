@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrderIdGenerator implements DomainService {
 
-    public String generate() {
-        return UuidUtil.newUuid();
-    }
+  public String generate() {
+    return UuidUtil.newUuid();
+  }
 }

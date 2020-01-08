@@ -7,22 +7,20 @@ import java.math.BigDecimal;
 import java.time.Instant;
 
 @Data
-public class Product implements AggregateRoot{
-    private String id;
-    private String name;
-    private String description;
-    private BigDecimal price;
-    private Instant createdAt;
+public class Product implements AggregateRoot {
+  private String id;
+  private String name;
+  private String description;
+  private BigDecimal price;
+  private Instant createdAt;
 
-    public Product() {
-    }
+  public Product() {}
 
-    public Product(String id, String name, String description, BigDecimal price) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.price = price;
-        this.createdAt = Instant.now();
-    }
-
+  public Product(String id, String name, String description, BigDecimal price) {
+    this.id = id;
+    this.name = name;
+    this.description = description;
+    this.price = price;
+    this.createdAt = Instant.now();
+  }
 }

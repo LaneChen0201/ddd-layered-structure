@@ -8,30 +8,32 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping(value = "/orders")
 public class OrderController {
-    private final OrderApplicationService service;
+  private final OrderApplicationService service;
 
-    public OrderController(OrderApplicationService service) {
-        this.service = service;
-    }
+  public OrderController(OrderApplicationService service) {
+    this.service = service;
+  }
 
-    @PostMapping
-    public String createOrder(@RequestBody @Valid CreateOrderCommand command) {
-        return service.createOrder(command);
-    }
+  @PostMapping
+  public String createOrder(@RequestBody @Valid CreateOrderCommand command) {
+    return service.createOrder(command);
+  }
 
-    @PostMapping("/{id}")
-    public void updateProductCount(@PathVariable(name = "id") String id, @RequestBody @Valid UpdateProductCountCommand command) {
-        // TODO: 更新Order中Product的数量
-    }
+  @PostMapping("/{id}")
+  public void updateProductCount(
+      @PathVariable(name = "id") String id, @RequestBody @Valid UpdateProductCountCommand command) {
+    // TODO: 更新Order中Product的数量
+  }
 
-    @PostMapping("/{id}/payment")
-    public void pay(@PathVariable(name = "id") String id, @RequestBody @Valid PayOrderCommand command) {
-        // TODO: 支付Order
-    }
+  @PostMapping("/{id}/payment")
+  public void pay(
+      @PathVariable(name = "id") String id, @RequestBody @Valid PayOrderCommand command) {
+    // TODO: 支付Order
+  }
 
-    @GetMapping("/{id}")
-    public OrderPTO byId(@PathVariable(name = "id") String id) {
-        // TODO
-        return null;
-    }
+  @GetMapping("/{id}")
+  public OrderPTO byId(@PathVariable(name = "id") String id) {
+    // TODO
+    return null;
+  }
 }

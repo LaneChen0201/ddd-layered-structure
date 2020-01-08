@@ -1,4 +1,3 @@
 package com.tw.wh.eshop.common.ddd;
 
-public interface DomainService {
-}
+public interface DomainService {}

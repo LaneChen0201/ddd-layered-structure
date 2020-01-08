@@ -12,13 +12,12 @@ import static java.util.TimeZone.getTimeZone;
 @SpringBootApplication
 public class Application {
 
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(Application.class, args);
+  }
 
-    @PostConstruct
-    void started() {
-        TimeZone.setDefault(getTimeZone(of("Asia/Shanghai")));
-    }
+  @PostConstruct
+  void started() {
+    TimeZone.setDefault(getTimeZone(of("Asia/Shanghai")));
+  }
 }
-

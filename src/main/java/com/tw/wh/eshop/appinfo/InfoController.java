@@ -13,16 +13,19 @@ import java.util.Arrays;
 @RequestMapping(value = "/info")
 public class InfoController {
 
-    private Environment environment;
+  private Environment environment;
 
-    public InfoController(Environment environment) {
-        this.environment = environment;
-    }
+  public InfoController(Environment environment) {
+    this.environment = environment;
+  }
 
-    @GetMapping
-    @ResponseBody
-    public InfoPTO about() {
-        String activeProfiles = Arrays.toString(environment.getActiveProfiles());
-        return new InfoPTO(environment.getProperty("spring.application.name"),ZonedDateTime.now().toString(), activeProfiles);
-    }
+  @GetMapping
+  @ResponseBody
+  public InfoPTO about() {
+    String activeProfiles = Arrays.toString(environment.getActiveProfiles());
+    return new InfoPTO(
+        environment.getProperty("spring.application.name"),
+        ZonedDateTime.now().toString(),
+        activeProfiles);
+  }
 }
