@@ -16,8 +16,7 @@ public class OrderController {
 
     @PostMapping
     public String createOrder(@RequestBody @Valid CreateOrderCommand command) {
-        // TODO: 创建Order
-        return null;
+        return service.createOrder(command);
     }
 
     @PostMapping("/{id}")
@@ -32,6 +31,7 @@ public class OrderController {
 
     @GetMapping("/{id}")
     public OrderPTO byId(@PathVariable(name = "id") String id) {
-        return service.byId(id);
+        // TODO
+        return null;
     }
 }
