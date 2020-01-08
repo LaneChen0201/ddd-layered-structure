@@ -1,8 +1,8 @@
 package com.tw.wh.eshop.representation;
 
-import com.tw.wh.eshop.application.CreateProductCommand;
-import com.tw.wh.eshop.application.ProductAppService;
-import com.tw.wh.eshop.application.ProductPTO;
+import com.tw.wh.eshop.appservice.CreateProductCommand;
+import com.tw.wh.eshop.appservice.product.ProductAppService;
+import com.tw.wh.eshop.appservice.product.ProductPTO;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;

@@ -1,6 +1,5 @@
-package com.tw.wh.eshop.representation;
+package com.tw.wh.eshop.appinfo;
 
-import com.tw.wh.eshop.application.InfoPTO;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

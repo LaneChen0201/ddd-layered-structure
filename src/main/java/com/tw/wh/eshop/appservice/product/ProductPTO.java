@@ -1,4 +1,4 @@
-package com.tw.wh.eshop.application;
+package com.tw.wh.eshop.appservice.product;
 
 import java.math.BigDecimal;
 
