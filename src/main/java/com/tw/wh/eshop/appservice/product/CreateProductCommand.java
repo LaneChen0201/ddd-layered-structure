@@ -1,4 +1,4 @@
-package com.tw.wh.eshop.appservice;
+package com.tw.wh.eshop.appservice.product;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

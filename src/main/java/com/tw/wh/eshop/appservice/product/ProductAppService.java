@@ -1,6 +1,5 @@
 package com.tw.wh.eshop.appservice.product;
 
-import com.tw.wh.eshop.appservice.CreateProductCommand;
 import com.tw.wh.eshop.domain.product.Product;
 import com.tw.wh.eshop.domain.product.ProductFactory;
 import com.tw.wh.eshop.domain.product.ProductRepository;
