@@ -1,4 +1,4 @@
-package com.tw.wh.eshop;
+package com.tw.wh.eshop.util;
 
 import java.util.UUID;
 

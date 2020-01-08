@@ -1,6 +1,6 @@
 package com.tw.wh.eshop.domain.order;
 
-import com.tw.wh.eshop.UuidUtil;
+import com.tw.wh.eshop.util.UuidUtil;
 import com.tw.wh.eshop.common.ddd.DomainService;
 import org.springframework.stereotype.Component;
 
