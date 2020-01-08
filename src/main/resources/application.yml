@@ -1,0 +1,9 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:13306/eshop_mysql
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+  application:
+    name: ddd-layered-structure
