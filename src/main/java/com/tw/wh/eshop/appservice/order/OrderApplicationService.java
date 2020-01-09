@@ -33,4 +33,11 @@ public class OrderApplicationService implements ApplicationService {
     repository.save(order);
     return order.getId();
   }
+
+  @Transactional
+  public void updateProductCount(String id, UpdateProductCountCommand command) {
+    Order order = repository.byId(id);
+    order.updateProductCount(id, command.getCount());
+    repository.save(order);
+  }
 }
