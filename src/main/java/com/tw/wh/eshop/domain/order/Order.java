@@ -39,21 +39,6 @@ public class Order {
     return items.stream().map(OrderItem::totalPrice).reduce(ZERO, BigDecimal::add);
   }
 
-  public void updateProductCount(String productId, int count) {
-    if (this.status == PAID) {
-      throw new OrderCannotBeModifiedException(this.id);
-    }
-    OrderItem orderItem =
-        items.stream()
-            .filter(item -> item.getProductId().equals(productId))
-            .findFirst()
-            .orElseThrow(() -> new ProductNotInOrderException(productId, id));
-
-    orderItem.updateCount(count);
-
-    this.totalPrice = calculateTotalPrice();
-  }
-
   public void pay(BigDecimal paidPrice) {
     if (!this.totalPrice.equals(paidPrice)) {
       throw new PaidPriceNotSameWithOrderPriceException(id);

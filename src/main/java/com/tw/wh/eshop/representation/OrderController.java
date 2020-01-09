@@ -22,7 +22,7 @@ public class OrderController {
   @PostMapping("/{id}")
   public void updateProductCount(
       @PathVariable(name = "id") String id, @RequestBody @Valid UpdateProductCountCommand command) {
-    service.updateProductCount(id, command);
+    // TODO
   }
 
   @PostMapping("/{id}/payment")
